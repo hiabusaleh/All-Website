@@ -1,22 +1,52 @@
 {
-  "_note": "প্ল্যান §৮ Execution Order। কোনো ধাপ শেষ হলে এখানে status বদলান; Home পাতায় দেখা যায়।",
+  "_note": "প্ল্যান §৮ Execution Order। weight = ধাপটা কত বড় (মোট % হিসাবের জন্য)। tasks থাকলে ধাপের % সেখান থেকে হিসাব হয়; না থাকলে percent field থেকে। কাজ শেষ হলে done: true করুন।",
+  "updated": "2026-09-27",
   "steps": [
-    { "n": 1, "title": "Inventory + Audit", "status": "done" },
-    { "n": 2, "title": "Cleanup: duplicate আর .bak → _ARCHIVE", "status": "todo" },
-    { "n": 3, "title": "Skill Registry (skills.json)", "status": "started" },
-    { "n": 4, "title": "question_types.json", "status": "started" },
-    { "n": 5, "title": "Portal: shell, hub, search, key migration, build.js", "status": "started" },
-    { "n": 6, "title": "Deploy v0", "status": "todo" },
-    { "n": 7, "title": "Data Layer (cambridge/*.json)", "status": "todo" },
-    { "n": 8, "title": "Vocabulary এক করা", "status": "todo" },
-    { "n": 9, "title": "Error Database + Error Lab v1", "status": "todo" },
-    { "n": 10, "title": "Vertical Slice: Paraphrase Recognition", "status": "todo" },
-    { "n": 11, "title": "Writing Hub", "status": "todo" },
-    { "n": 12, "title": "শোষণ: পুরনো app নতুন engine-এ", "status": "todo" },
-    { "n": 13, "title": "Skill Library সম্পূর্ণ", "status": "todo" },
-    { "n": 14, "title": "যাচাই", "status": "todo" },
-    { "n": 15, "title": "Cambridge-এর অনুমতি → Public launch", "status": "todo" },
-    { "n": 16, "title": "Accounts + Premium", "status": "todo" },
-    { "n": 17, "title": "Personalization Engine + Android (PWA)", "status": "todo" }
+    { "n": 1, "title": "Inventory + Audit", "status": "done", "weight": 1 },
+    { "n": 2, "title": "Cleanup: duplicate আর .bak → _ARCHIVE", "status": "todo", "weight": 1, "percent": 0, "where": "G:\\IELTS (Cowork)" },
+    { "n": 3, "title": "Skill Registry (skills.json)", "status": "started", "weight": 2, "tasks": [
+      { "title": "skills.json-এর কাঠামো আর নিয়ম যাচাই", "done": true },
+      { "title": "প্লানের নমুনা skill (X-SK-004)", "done": true },
+      { "title": "Skill Map থেকে সব canonical ID", "done": false, "weight": 3 },
+      { "title": "Question Matrix, 53-Skill course আর S1–S12 alias", "done": false, "weight": 3 },
+      { "title": "Abu Saleh-এর approve", "done": false }
+    ] },
+    { "n": 4, "title": "question_types.json", "status": "started", "weight": 2, "tasks": [
+      { "title": "কাঠামো আর নিয়ম যাচাই", "done": true },
+      { "title": "Reading-এর ১৬টা type", "done": false, "weight": 3 },
+      { "title": "Listening-এর ১০টা type", "done": false, "weight": 2 },
+      { "title": "প্রতিটা type-এ skill, trap, error", "done": false, "weight": 3 },
+      { "title": "Abu Saleh-এর approve", "done": false }
+    ] },
+    { "n": 5, "title": "Portal: shell, hub, search, key migration, build.js", "status": "started", "weight": 4, "tasks": [
+      { "title": "08_WEBSITE_CODE ফোল্ডার কাঠামো", "done": true },
+      { "title": "Shell: router, navigation, theme, লেখার আকার", "done": true },
+      { "title": "সব hub-এর পাতা (§৪ navigation)", "done": true },
+      { "title": "Skill Library আর Skill Page (Learning Ladder)", "done": true },
+      { "title": "পুরো সাইটে search (alias সহ)", "done": true },
+      { "title": "localStorage key migration (§৭)", "done": true },
+      { "title": "Progress Export/Import + পুরনো পাতার export tool", "done": true },
+      { "title": "পুরনো app-এর shared top bar", "done": true },
+      { "title": "build.js + data যাচাই + tests", "done": true },
+      { "title": "Service worker আর manifest (offline, install)", "done": true },
+      { "title": "পুরনো app-গুলো /apps/-এ কপি করা", "done": false, "weight": 4 },
+      { "title": "সব পুরনো ফিচার আর লিংক যাচাই", "done": false, "weight": 2 }
+    ] },
+    { "n": 6, "title": "Deploy v0", "status": "started", "weight": 1, "tasks": [
+      { "title": "স্বয়ংক্রিয় deploy (GitHub Pages workflow)", "done": true },
+      { "title": "Audio-র জন্য R2 বা Bunny", "done": false },
+      { "title": "ফোনে install করে offline test", "done": false }
+    ] },
+    { "n": 7, "title": "Data Layer (cambridge/*.json)", "status": "todo", "weight": 4, "percent": 0 },
+    { "n": 8, "title": "Vocabulary এক করা", "status": "todo", "weight": 3, "percent": 0 },
+    { "n": 9, "title": "Error Database + Error Lab v1", "status": "todo", "weight": 3, "percent": 0 },
+    { "n": 10, "title": "Vertical Slice: Paraphrase Recognition", "status": "todo", "weight": 4, "percent": 0 },
+    { "n": 11, "title": "Writing Hub", "status": "todo", "weight": 3, "percent": 0 },
+    { "n": 12, "title": "শোষণ: পুরনো app নতুন engine-এ", "status": "todo", "weight": 6, "percent": 0 },
+    { "n": 13, "title": "Skill Library সম্পূর্ণ", "status": "todo", "weight": 4, "percent": 0 },
+    { "n": 14, "title": "যাচাই", "status": "todo", "weight": 2, "percent": 0 },
+    { "n": 15, "title": "Cambridge-এর অনুমতি → Public launch", "status": "todo", "weight": 1, "percent": 0 },
+    { "n": 16, "title": "Accounts + Premium", "status": "todo", "weight": 3, "percent": 0 },
+    { "n": 17, "title": "Personalization Engine + Android (PWA)", "status": "todo", "weight": 3, "percent": 0 }
   ]
 }

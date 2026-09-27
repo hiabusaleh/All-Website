@@ -9,6 +9,7 @@ import { renderHub } from '../hubs/hub.js';
 import { renderSkills, renderSkill } from '../hubs/skills.js';
 import { renderProgress, bindProgress } from '../hubs/progress.js';
 import { renderSearch } from '../hubs/search.js';
+import { renderRoadmap } from '../hubs/roadmap.js';
 
 initTheme();
 try { migrate(storage); } catch (e) { console.warn('migration failed', e); }

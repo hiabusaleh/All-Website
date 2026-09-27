@@ -1,0 +1,11 @@
+# build output
+08_WEBSITE_CODE/dist/
+node_modules/
+
+# পুরনো app আর audio git-এ যাবে না (বড় আর Cambridge content); শুধু README থাকে
+08_WEBSITE_CODE/src/apps/*
+!08_WEBSITE_CODE/src/apps/README.md
+08_WEBSITE_CODE/src/media/audio/*
+
+.DS_Store
+Thumbs.db

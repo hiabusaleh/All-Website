@@ -1,5 +1,5 @@
 // Service worker: shell আগে থেকে cache হয় (offline mode); বাকি পাতা প্রথমবার খোলার পর cache হয়.
-// __VERSION__ আর __PRECACHE__ build.js বসায়.
+// VERSION আর PRECACHE-এর মান build.js বসায়.
 const VERSION = '__VERSION__';
 const PRECACHE = __PRECACHE__;
 const CACHE = `ielts-${VERSION}`;

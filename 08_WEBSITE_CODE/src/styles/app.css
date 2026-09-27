@@ -164,3 +164,21 @@ a.card:hover { transform: translateY(-2px); border-color: var(--accent, var(--br
   .facts { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* ── % meter আর roadmap ── */
+.meter { position: relative; height: 26px; background: var(--surface-2); border-radius: 999px; overflow: hidden; margin: 6px 0 14px; }
+.meter.big { height: 34px; margin-bottom: 24px; }
+.meter.thin { height: 8px; margin: 6px 0; }
+.meter-fill { height: 100%; background: linear-gradient(90deg, var(--brand), var(--correct)); border-radius: inherit; }
+.meter-label { position: absolute; inset: 0; display: grid; place-items: center; font-weight: 700; font-family: var(--font-head); }
+.steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.step-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 16px; }
+.step-card.rm-todo { opacity: .8; }
+.step-head { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; }
+.step-n { width: 2em; height: 2em; display: inline-grid; place-items: center; border-radius: 50%; background: var(--surface-2); font-weight: 700; }
+.rm-done .step-n { background: var(--correct); color: #fff; }
+.rm-started .step-n { background: var(--anchor); color: #000; }
+.step-pct { margin-left: auto; font-family: var(--font-head); font-weight: 700; }
+.tasks { list-style: none; padding: 0; margin: 6px 0 0; font-size: .92rem; columns: 2 280px; }
+.tasks li { break-inside: avoid; padding: 2px 0; color: var(--muted); }
+.tasks li.is-done { color: var(--text); }

@@ -1,5 +1,6 @@
 import { esc, bn, hubRoute, appCard } from '../shell/ui.js';
 import { allKeys, moduleOf } from '../shell/store.js';
+import { overallPercent } from '../shell/roadmap.js';
 
 const MAIN = ['reading', 'listening', 'writing', 'speaking'];
 
@@ -23,6 +24,7 @@ export function renderHome(ctx) {
   const liveApps = apps.filter((a) => a.available).length;
   const next = roadmap.steps.find((s) => s.status !== 'done');
   const done = roadmap.steps.filter((s) => s.status === 'done').length;
+  const pct = overallPercent(roadmap);
   const extra = apps.filter((a) => a.hub === 'home');
 
   return `
@@ -51,15 +53,16 @@ export function renderHome(ctx) {
       <a class="btn" href="#/skill/X-SK-004">প্রথম skill: Paraphrase Recognition →</a>
     </div>
     <div class="panel">
-      <h2>Platform-এর অবস্থা</h2>
+      <h2>কাজ কত দূর</h2>
+      <div class="meter" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}" aria-label="পুরো প্রজেক্ট">
+        <div class="meter-fill" style="width:${pct}%"></div><span class="meter-label">${bn(pct)}%</span>
+      </div>
       <div class="stat-row">
         <div class="stat"><span class="stat-n">${bn(done)}/${bn(roadmap.steps.length)}</span><span class="stat-l">ধাপ শেষ</span></div>
         <div class="stat"><span class="stat-n">${bn(liveApps)}/${bn(apps.length)}</span><span class="stat-l">পুরনো app চালু</span></div>
         <div class="stat"><span class="stat-n">${bn(ctx.skills.skills.filter((s) => s.status === 'APPROVED').length)}</span><span class="stat-l">approved skill</span></div>
       </div>
-      <ol class="roadmap">
-        ${roadmap.steps.map((s) => `<li class="rm-${esc(s.status)}"><span>${bn(s.n)}</span>${esc(s.title)}</li>`).join('')}
-      </ol>
+      <a class="btn btn-ghost" href="#/roadmap">প্রতিটা ধাপের হিসাব →</a>
     </div>
   </section>
 
