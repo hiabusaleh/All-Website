@@ -1,0 +1,10 @@
+{
+  "_note": "ধাপ ৪-এ Reading-এর ১৬টা আর Listening-এর ১০টা type এখানে আসবে। এখন শুধু Skill Registry-তে যে ID-গুলোর উল্লেখ আছে সেগুলো আছে। কোন ID কোন type, সেটা উৎস ফাইল থেকে নিশ্চিত না হওয়া পর্যন্ত name = null।",
+  "version": 1,
+  "expected": { "reading": 16, "listening": 10 },
+  "question_types": [
+    { "id": "R-QT-004", "module": "reading", "name": null, "primary_skills": [], "secondary_skills": [], "traps": [], "errors": [], "status": "PENDING_SOURCE" },
+    { "id": "R-QT-005", "module": "reading", "name": null, "primary_skills": [], "secondary_skills": [], "traps": [], "errors": [], "status": "PENDING_SOURCE" },
+    { "id": "L-QT-001", "module": "listening", "name": null, "primary_skills": [], "secondary_skills": [], "traps": [], "errors": [], "status": "PENDING_SOURCE" }
+  ]
+}

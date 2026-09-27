@@ -1,0 +1,96 @@
+/* Design tokens (প্ল্যান §৬). রঙের অর্থ সব জায়গায় এক. */
+:root {
+  --font-head: 'Anek Bangla', 'Hind Siliguri', system-ui, sans-serif;
+  --font-body: 'Hind Siliguri', 'Inter', system-ui, sans-serif;
+  --font-en: 'Inter', system-ui, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  --fs-base: 17px;
+  --radius: 14px;
+  --gap: 16px;
+  --maxw: 1180px;
+
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --surface-2: #eef1f8;
+  --text: #1b2130;
+  --muted: #5c6578;
+  --border: #dde2ee;
+  --brand: #3056d3;
+  --on-brand: #ffffff;
+  --shadow: 0 1px 2px rgb(20 30 60 / 6%), 0 4px 16px rgb(20 30 60 / 6%);
+
+  /* অর্থের রঙ */
+  --correct: #1f9d55;   /* সবুজ = সঠিক বা প্রমাণ */
+  --wrong: #d64545;     /* লাল = ভুল */
+  --trap: #e8801a;      /* কমলা = trap */
+  --anchor: #e8c21a;    /* হলুদ = anchor */
+  --main-idea: #2cb5a0; /* মিন্ট = main idea */
+
+  /* module accent */
+  --reading: #2f6fe0;
+  --listening: #7c4ddb;
+  --writing: #2e9d4f;
+  --speaking: #13928f;
+  --mint: #2cb5a0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg: #11141c;
+    --surface: #1a1f2b;
+    --surface-2: #232a39;
+    --text: #e7eaf2;
+    --muted: #9aa3b7;
+    --border: #2e3647;
+    --brand: #7a9bff;
+    --on-brand: #0d1220;
+    --shadow: 0 1px 2px rgb(0 0 0 / 30%);
+    --reading: #6f9cff;
+    --listening: #a987ff;
+    --writing: #5cc97b;
+    --speaking: #3cc4c0;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #11141c;
+  --surface: #1a1f2b;
+  --surface-2: #232a39;
+  --text: #e7eaf2;
+  --muted: #9aa3b7;
+  --border: #2e3647;
+  --brand: #7a9bff;
+  --on-brand: #0d1220;
+  --shadow: 0 1px 2px rgb(0 0 0 / 30%);
+  --reading: #6f9cff;
+  --listening: #a987ff;
+  --writing: #5cc97b;
+  --speaking: #3cc4c0;
+}
+
+:root[data-theme='sepia'] {
+  --bg: #f4ecdd;
+  --surface: #fbf6ec;
+  --surface-2: #efe4cf;
+  --text: #3b2f22;
+  --muted: #76664f;
+  --border: #e0d2b8;
+  --brand: #9a5b1c;
+  --on-brand: #ffffff;
+}
+
+:root[data-theme='contrast'] {
+  --bg: #000000;
+  --surface: #000000;
+  --surface-2: #151515;
+  --text: #ffffff;
+  --muted: #d6d6d6;
+  --border: #ffffff;
+  --brand: #ffd400;
+  --on-brand: #000000;
+  --shadow: none;
+  --reading: #7fb2ff;
+  --listening: #c9a8ff;
+  --writing: #7dffa0;
+  --speaking: #5ff5ef;
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IELTS Master Platform</title>
+  <meta name="description" content="এক Website · চার Hub · Skill-First · Cambridge-Integrated">
+  <meta name="theme-color" content="#3056d3">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@500;700&family=Hind+Siliguri:wght@400;600&family=Inter:wght@400;600&display=swap">
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/app.css">
+  <script>
+    // theme আগে বসানো হয়, যাতে পাতা খোলার সময় রঙ ঝলক না দেয়
+    try {
+      var t = JSON.parse(localStorage.getItem('ui.theme') || '"auto"');
+      if (t && t !== 'auto') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#view">মূল অংশে যান</a>
+  <header class="topbar">
+    <a class="brand" href="#/"><img src="icons/icon.svg" alt="" width="28" height="28"><span>IELTS Master</span></a>
+    <form id="searchform" class="search" role="search">
+      <input id="q" type="search" placeholder="খুঁজুন… ( / )" aria-label="পুরো সাইটে খুঁজুন" autocomplete="off">
+    </form>
+    <button id="open-settings" class="icon-btn" type="button" aria-label="Theme আর লেখার আকার">⚙</button>
+  </header>
+  <nav id="hubnav" class="hubnav" aria-label="সব অংশ"></nav>
+
+  <main id="view" class="view" tabindex="-1">
+    <p class="muted">লোড হচ্ছে…</p>
+  </main>
+
+  <footer class="footer">
+    <p>IELTS Master Platform · Portal v0 · <a href="#/progress">Progress Export/Import</a></p>
+  </footer>
+
+  <dialog id="settings" class="settings">
+    <h2>দেখার ধরন</h2>
+    <h3>Theme</h3>
+    <div class="chips" data-theme-list></div>
+    <h3>লেখার আকার</h3>
+    <div class="chips" data-size-list></div>
+    <div class="btn-row"><button class="btn" type="button" data-close>ঠিক আছে</button></div>
+  </dialog>
+
+  <noscript><p class="panel notice">এই সাইট চালাতে JavaScript চালু থাকতে হবে।</p></noscript>
+  <script type="module" src="shell/app.js"></script>
+</body>
+</html>

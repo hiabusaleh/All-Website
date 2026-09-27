@@ -1,0 +1,35 @@
+{
+  "_note": "Portal ধাপের পুরনো app-এর তালিকা (_INVENTORY.md §খ থেকে)। প্রতিটা app-এর ফোল্ডার src/apps/<dir>/-এ কপি করলে build নিজে থেকে 'available' করে দেবে। private = Cambridge বা তৃতীয় পক্ষের content আছে; public launch-এর আগে অনুমতি লাগবে (প্ল্যান §৮ ধাপ ১৫)।",
+  "apps": [
+    { "id": "l-start", "hub": "listening", "title": "Listening START HERE", "sub": "পুরনো dashboard, সব লিংক", "source": "01. Listening/Listening Analysis/00. START HERE", "dir": "listening/start-here", "entry": "index.html", "private": false },
+    { "id": "l-full-tests", "hub": "listening", "title": "Full Tests C10–21", "sub": "৪৮ টেস্ট, audio, ১,৯২০ প্রশ্নের answer key, transcript", "count": 48, "source": "01. Listening/Listening Analysis/10. FULL TESTS", "dir": "listening/full-tests", "entry": "index.html", "private": true, "keys": ["ielts_lt::"] },
+    { "id": "l-drill", "hub": "listening", "title": "Spelling & Number Drill", "sub": "১,০০১টা আসল উত্তর", "count": 1001, "source": "01. Listening/Listening Analysis/20. SPELLING & NUMBER DRILL", "dir": "listening/drill", "entry": "index.html", "private": false, "keys": ["ielts_drill"] },
+    { "id": "l-synonym", "hub": "listening", "title": "Synonym Map", "sub": "১,৭২৪ জোড়া (প্রশ্ন ↔ অডিও)", "count": 1724, "source": "01. Listening/Listening Analysis/30. SYNONYM MAP", "dir": "listening/synonym-map", "entry": "index.html", "private": true, "keys": ["ielts_syn::"] },
+    { "id": "l-az", "hub": "listening", "title": "A–Z Guides", "sub": "১০টা question type-এর কৌশল", "count": 10, "source": "01. Listening/Listening Analysis/40. A–Z GUIDES", "dir": "listening/az-guides", "entry": "index.html", "private": false },
+    { "id": "l-vault", "hub": "listening", "title": "Vocabulary Vault", "sub": "৪.৮ MB-এর শব্দভান্ডার", "source": "01. Listening/Listening Analysis/03. MASTER BANKS", "dir": "listening/vocabulary-vault", "entry": "index.html", "private": false, "keys": ["navstate", "shopt", "smopt", "vaultoff", "vtheme", "vfs"] },
+    { "id": "l-p258", "hub": "listening", "title": "258 Paraphrase Trainer", "sub": "hint সহ paraphrase অনুশীলন", "count": 258, "source": "01. Listening/Listening Analysis/03. MASTER BANKS", "dir": "listening/paraphrase-258", "entry": "index.html", "private": false },
+    { "id": "l-master-banks", "hub": "listening", "title": "Master Banks", "sub": "Synonym 245–258 ও অন্যান্য bank", "source": "01. Listening/Listening Analysis/03. MASTER BANKS", "dir": "listening/master-banks", "entry": "index.html", "private": false },
+    { "id": "l-stress", "hub": "listening", "title": "Stress Map", "sub": "C10T1 Part 4-এর color-coded stress map", "source": "01. Listening/Listening Analysis/Stress Marking Practice", "dir": "listening/stress-map", "entry": "index.html", "private": true },
+    { "id": "l-battle", "hub": "listening", "title": "Battle Cards", "sub": "উৎস ফাইল এখনো চিহ্নিত হয়নি", "source": null, "dir": "listening/battle-cards", "entry": "index.html", "private": false },
+
+    { "id": "r-start", "hub": "reading", "title": "Reading START HERE", "sub": "পুরনো dashboard", "source": "02. Reading/Reading Analysis/00. START HERE", "dir": "reading/start-here", "entry": "index.html", "private": false },
+    { "id": "r-full-tests", "hub": "reading", "title": "Full Tests C10–21", "sub": "৪৮ টেস্টের passage আর প্রশ্ন", "count": 48, "source": "02. Reading/Reading Analysis/10. FULL TESTS", "dir": "reading/full-tests", "entry": "index.html", "private": true, "keys": ["ielts_ft::"] },
+    { "id": "r-qtype", "hub": "reading", "title": "Question Type Bank", "sub": "১৬টা type-এর guide + ২৯০টা প্রশ্ন ও key", "count": 16, "source": "02. Reading/Reading Analysis/07. QUESTION TYPE BANK", "dir": "reading/question-type-bank", "entry": "index.html", "private": true },
+    { "id": "r-recent", "hub": "reading", "title": "Recent Questions", "sub": "১৬৮টা টেস্ট (Part-01, Part-02)", "count": 168, "source": "02. Reading/Recent Questions", "dir": "reading/recent-questions", "entry": "index.html", "private": true },
+    { "id": "r-paragraph", "hub": "reading", "title": "Paragraph Structure Engine", "sub": "paragraph-এর কাঠামো চেনা", "source": "02. Reading/Reading Analysis/11. PARAGRAPH STRUCTURE", "dir": "reading/paragraph-structure", "entry": "index.html", "private": true },
+    { "id": "r-skim", "hub": "reading", "title": "Skim Lab", "sub": "skimming আর scanning অনুশীলন", "source": "02. Reading/001. Skimming & Scanning Mastery/Skim Lab.html", "dir": "reading/skim-lab", "entry": "index.html", "private": true },
+    { "id": "r-paraphrase", "hub": "reading", "title": "Paraphrase Bank", "sub": "ধরন, বই আর টেস্ট অনুযায়ী ৬২ পাতা", "count": 62, "source": "02. Reading/Reading Analysis/09. PARAPHRASE BANK", "dir": "reading/paraphrase-bank", "entry": "index.html", "private": true },
+    { "id": "r-vocab", "hub": "reading", "title": "Vocabulary Bank", "sub": "master, book-wise আর শেখা শব্দের রিভিশন", "count": 14, "source": "02. Reading/Reading Analysis/08. VOCABULARY BANK", "dir": "reading/vocabulary-bank", "entry": "index.html", "private": false, "keys": ["ielts_vocab::"] },
+    { "id": "r-battle", "hub": "reading", "title": "Battle Cards", "sub": "উৎস ফাইল এখনো চিহ্নিত হয়নি", "source": null, "dir": "reading/battle-cards", "entry": "index.html", "private": false },
+    { "id": "r-rescue", "hub": "reading", "title": "Rescue Plan", "sub": "উৎস ফাইল এখনো চিহ্নিত হয়নি", "source": null, "dir": "reading/rescue-plan", "entry": "index.html", "private": false },
+
+    { "id": "f-zero", "hub": "foundation", "title": "Zero (Level 0–12)", "sub": "একদম শুরু থেকে", "source": "04. Speaking/_SITE", "dir": "foundation/zero", "entry": "index.html", "private": false },
+    { "id": "f-decoder", "hub": "foundation", "title": "Sentence Decoder", "sub": "লম্বা বাক্য ভেঙে বোঝা", "source": "02. Reading/Understing Long Sentence", "dir": "foundation/sentence-decoder", "entry": "index.html", "private": false },
+    { "id": "f-svo", "hub": "foundation", "title": "S+V+O Decoder Lab", "sub": "বাক্যের মূল কাঠামো", "source": "02. Reading/Understing Long Sentence", "dir": "foundation/svo-lab", "entry": "index.html", "private": false },
+
+    { "id": "s-site", "hub": "speaking", "title": "Speaking Site", "sub": "Learn · Speak · Structure · Phrase · Questions · Cue Card · Core Story", "source": "04. Speaking/_SITE", "dir": "speaking/site", "entry": "index.html", "private": true, "keys": ["sg."] },
+    { "id": "s-practice", "hub": "speaking", "title": "Speaking Practice Tool", "sub": "আলাদা practice পাতা", "source": "04. Speaking/0 Speaking/02_Practice/IELTS Speaking Practice Tool.html", "dir": "speaking/practice-tool", "entry": "index.html", "private": false },
+
+    { "id": "x-study-index", "hub": "home", "title": "Study Plan & Index", "sub": "কোন রিসোর্স পড়বেন: ৪টা index পাতা", "count": 4, "source": "00. Study Plan & Index", "dir": "study-index", "entry": "index.html", "private": false }
+  ]
+}

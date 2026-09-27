@@ -1,0 +1,71 @@
+{
+  "_note": "প্ল্যান §৪-এর navigation। 'status' = portal (পুরনো app দিয়ে চলছে) বা planned (যে ধাপে engine তৈরি হবে সেটা 'step'-এ)।",
+  "hubs": [
+    { "id": "foundation", "icon": "🌱", "title": "শূন্য থেকে", "en": "Foundation", "accent": "mint", "status": "portal",
+      "desc": "একদম শুরু থেকে: বাক্য চেনা, S+V+O, লম্বা বাক্য ভাঙা।",
+      "planned": [{ "title": "Sentence Decoder আর S+V+O Lab নতুন engine-এ", "step": 12 }] },
+
+    { "id": "reading", "icon": "📖", "title": "Reading", "en": "Reading", "accent": "reading", "status": "portal",
+      "desc": "Cambridge 10–21-এর ৪৮ টেস্ট, ১৬টা question type, Recent Questions, Paragraph Structure, Skim Lab।",
+      "planned": [
+        { "title": "দুই পাশে ভাগ করা Cambridge প্রশ্ন পাতা (passage + analysis)", "step": 7 },
+        { "title": "Reading আর Listening মিলে একটা Test Player", "step": 12 }
+      ] },
+
+    { "id": "listening", "icon": "🎧", "title": "Listening", "en": "Listening", "accent": "listening", "status": "portal",
+      "desc": "৪৮ টেস্ট audio সহ, ১,০০১ Spelling Drill, ১,৭২৪ Synonym Map, A–Z Guide, Vocabulary Vault।",
+      "planned": [
+        { "title": "Test Player: audio, timestamp, দাগানো transcript, live highlight", "step": 12 },
+        { "title": "Spelling & Number Drill নতুন engine-এ (প্রথম শোষণ)", "step": 12 }
+      ] },
+
+    { "id": "writing", "icon": "✍️", "title": "Writing", "en": "Writing", "accent": "writing", "status": "planned", "step": 11,
+      "desc": "Task 1, Task 2, Free Hand আর Master Note (Skill 27–32)। এখন content শুধু docx/md-তে আছে, তাই এই hub নতুন করে তৈরি হবে।",
+      "planned": [
+        { "title": "প্রশ্ন → নিজের লেখা → Reference → কাঠামো → Criteria → Revision", "step": 11 },
+        { "title": "অন্তত ৩টা Writing skill page", "step": 11 }
+      ] },
+
+    { "id": "speaking", "icon": "🗣️", "title": "Speaking", "en": "Speaking", "accent": "speaking", "status": "portal",
+      "desc": "Learn · Speak · Structure · Phrase · Questions · সারাদিন ইংরেজি · Natural · Cue Card · Core Story · Makkar।",
+      "planned": [{ "title": "Speaking Practice Tool, Stress Map, Battle Cards যার যার হাবে", "step": 12 }] },
+
+    { "id": "skills", "icon": "🧠", "title": "Skill Library", "en": "Skill Library", "accent": "brand", "status": "planned", "step": 3,
+      "desc": "সব skill এক জায়গায়: dependency map, প্রতিটার Learning Ladder, আমার দুর্বল skill।", "route": "#/skills",
+      "planned": [
+        { "title": "Skill Registry: ৪টা ID ব্যবস্থা এক করা", "step": 3 },
+        { "title": "২৬টা Master Note থেকে skill page", "step": 13 }
+      ] },
+
+    { "id": "practice", "icon": "📝", "title": "Practice", "en": "Practice", "accent": "brand", "status": "planned", "step": 10,
+      "desc": "Guided · Blind · Transfer · Timed। প্রথমে Paraphrase Recognition দিয়ে শুরু হবে।",
+      "planned": [{ "title": "Paraphrase Recognition vertical slice", "step": 10 }] },
+
+    { "id": "cambridge", "icon": "📚", "title": "Cambridge Lab", "en": "Cambridge Lab", "accent": "brand", "status": "planned", "step": 7,
+      "desc": "বই → টেস্ট → module → প্রশ্ন → skill, দুই দিকেই যাওয়া যাবে।",
+      "planned": [{ "title": "Data Layer: cambridge/*.json আর question_skill_map.json", "step": 7 }] },
+
+    { "id": "analysis", "icon": "🔬", "title": "Deep Analysis", "en": "Deep Analysis", "accent": "brand", "status": "planned", "step": 7,
+      "desc": "প্রতিটা প্রশ্নের evidence, paraphrase, trap আর sentence parsing, বাংলায় ধাপে-ধাপে।",
+      "planned": [{ "title": "solve_paths.json থেকে ধাপে-ধাপে সমাধান", "step": 7 }] },
+
+    { "id": "errors", "icon": "❌", "title": "Error Lab", "en": "Error Lab", "accent": "wrong", "status": "planned", "step": 9,
+      "desc": "চার module-এর সব ভুল এক জায়গায়: ভুল → skill → lesson।",
+      "planned": [{ "title": "errors.json আর Error Lab v1", "step": 9 }] },
+
+    { "id": "vocab", "icon": "🔤", "title": "Vocabulary", "en": "Vocabulary", "accent": "brand", "status": "planned", "step": 8,
+      "desc": "Reading, Listening, Speaking আর 06. Vocabulary-র সব শব্দ এক SRS-এ।",
+      "planned": [{ "title": "vocab.json আর একটাই SRS", "step": 8 }] },
+
+    { "id": "mastery", "icon": "🏆", "title": "Mastery", "en": "Mastery", "accent": "brand", "status": "planned", "step": 10,
+      "desc": "প্রতিটা skill-এর Mastery Gate (≥৮৫%)।",
+      "planned": [{ "title": "Mastery Gate", "step": 10 }] },
+
+    { "id": "progress", "icon": "📊", "title": "Progress", "en": "Progress", "accent": "brand", "status": "live", "route": "#/progress",
+      "desc": "সব progress এক জায়গায়, Export আর Import সহ।", "planned": [] },
+
+    { "id": "test-center", "icon": "🧪", "title": "Test Center", "en": "Test Center", "accent": "brand", "status": "planned", "step": 17,
+      "desc": "placement → skill test → mock।",
+      "planned": [{ "title": "Placement test আর mock", "step": 17 }] }
+  ]
+}

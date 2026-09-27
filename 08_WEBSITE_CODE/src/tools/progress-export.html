@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Progress Export</title>
+<style>
+  :root { --bg:#f6f7fb; --surface:#fff; --text:#1b2130; --muted:#5c6578; --brand:#3056d3; --border:#dde2ee; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#11141c; --surface:#1a1f2b; --text:#e7eaf2; --muted:#9aa3b7; --brand:#7a9bff; --border:#2e3647; } }
+  body { margin:0; background:var(--bg); color:var(--text); font:17px/1.65 "Hind Siliguri", system-ui, sans-serif; }
+  main { max-width:640px; margin:0 auto; padding:24px 16px; }
+  .panel { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:18px; }
+  button { font:inherit; font-weight:600; background:var(--brand); color:#fff; border:0; padding:10px 18px; border-radius:10px; cursor:pointer; }
+  code { font-family:ui-monospace, Consolas, monospace; font-size:.9em; }
+  .muted { color:var(--muted); }
+  ul { font-size:.9rem; max-height:240px; overflow:auto; }
+</style>
+</head>
+<body>
+<main>
+  <h1>পুরনো পাতার progress Export</h1>
+  <div class="panel">
+    <p>এই ফাইলটা <code>G:\IELTS</code>-এ রেখে, যে browser-এ পুরনো পাতাগুলো খুলতেন, সেই browser-এ খুলুন। তারপর নিচের বোতাম চাপুন। নামা <code>.json</code> ফাইলটা নতুন সাইটের <strong>Progress → Import</strong>-এ দিন।</p>
+    <p id="count" class="muted"></p>
+    <button id="go" type="button">⬇ Export</button>
+    <ul id="list"></ul>
+    <p class="muted">Chrome আর Edge-এ কম্পিউটারের সব HTML ফাইল একই storage ব্যবহার করে, তাই এক জায়গা থেকেই সব পাওয়া যায়। Firefox প্রতিটা ফোল্ডারের storage আলাদা রাখে; সেখানে এই ফাইল পুরনো পাতার একই ফোল্ডারে রেখে খুলতে হবে।</p>
+  </div>
+</main>
+<script>
+  // নতুন সাইটের store.js-এর exportAll()-এর একই format
+  var KEEP = /^(ielts_|sg\.|navstate$|shopt$|smopt$|vaultoff$|vtheme$|vfs$)/;
+  function collect() {
+    var data = {};
+    try {
+      for (var i = 0; i < localStorage.length; i++) {
+        var k = localStorage.key(i);
+        if (KEEP.test(k)) data[k] = localStorage.getItem(k);
+      }
+    } catch (e) {}
+    return data;
+  }
+  var data = collect();
+  var keys = Object.keys(data).sort();
+  document.getElementById('count').textContent = keys.length
+    ? keys.length + 'টা key পাওয়া গেছে।'
+    : 'কোনো পুরনো progress পাওয়া যায়নি। ঠিক browser-এ খুলেছেন কি?';
+  document.getElementById('list').innerHTML = keys.map(function (k) {
+    return '<li><code>' + k.replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }) + '</code></li>';
+  }).join('');
+  document.getElementById('go').addEventListener('click', function () {
+    var payload = { app: 'ielts-master', version: 1, exported_at: new Date().toISOString(), source: 'legacy-file', data: data };
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' }));
+    a.download = 'ielts-legacy-progress-' + new Date().toISOString().slice(0, 10) + '.json';
+    a.click();
+  });
+</script>
+</body>
+</html>

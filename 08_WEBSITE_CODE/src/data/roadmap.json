@@ -1,0 +1,22 @@
+{
+  "_note": "প্ল্যান §৮ Execution Order। কোনো ধাপ শেষ হলে এখানে status বদলান; Home পাতায় দেখা যায়।",
+  "steps": [
+    { "n": 1, "title": "Inventory + Audit", "status": "done" },
+    { "n": 2, "title": "Cleanup: duplicate আর .bak → _ARCHIVE", "status": "todo" },
+    { "n": 3, "title": "Skill Registry (skills.json)", "status": "started" },
+    { "n": 4, "title": "question_types.json", "status": "started" },
+    { "n": 5, "title": "Portal: shell, hub, search, key migration, build.js", "status": "started" },
+    { "n": 6, "title": "Deploy v0", "status": "todo" },
+    { "n": 7, "title": "Data Layer (cambridge/*.json)", "status": "todo" },
+    { "n": 8, "title": "Vocabulary এক করা", "status": "todo" },
+    { "n": 9, "title": "Error Database + Error Lab v1", "status": "todo" },
+    { "n": 10, "title": "Vertical Slice: Paraphrase Recognition", "status": "todo" },
+    { "n": 11, "title": "Writing Hub", "status": "todo" },
+    { "n": 12, "title": "শোষণ: পুরনো app নতুন engine-এ", "status": "todo" },
+    { "n": 13, "title": "Skill Library সম্পূর্ণ", "status": "todo" },
+    { "n": 14, "title": "যাচাই", "status": "todo" },
+    { "n": 15, "title": "Cambridge-এর অনুমতি → Public launch", "status": "todo" },
+    { "n": 16, "title": "Accounts + Premium", "status": "todo" },
+    { "n": 17, "title": "Personalization Engine + Android (PWA)", "status": "todo" }
+  ]
+}

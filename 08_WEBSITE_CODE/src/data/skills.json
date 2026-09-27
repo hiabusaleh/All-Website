@@ -1,0 +1,57 @@
+{
+  "_note": "Skill Registry (প্ল্যান §৩)। Canonical ID = Skill Map-এর L-SK-/R-SK-/W-SK-/S-SK-/X-SK-। এখন শুধু প্ল্যানে দেওয়া নমুনাটা আছে। বাকি skill ধাপ ৩-এ Skill Map, Question Matrix আর 53-Skill course থেকে আসবে। নিজে থেকে নতুন ID বানানো যাবে না।",
+  "version": 1,
+  "id_pattern": "^(L|R|W|S|X)-SK-\\d{3}$",
+  "skills": [
+    {
+      "id": "X-SK-004",
+      "name": "Paraphrase Recognition",
+      "bn": "প্যারাফ্রেজ চেনা",
+      "modules": ["reading", "listening"],
+      "aliases": ["R-SK-009", "R-S14", "L-S08", "L-SK-004", "Skill_10"],
+      "level": 1,
+      "prerequisites": ["X-SK-001", "X-SK-003"],
+      "question_types": ["R-QT-004", "R-QT-005", "L-QT-001"],
+      "lesson_source": "000 IELTS 53-Skill Mastery Course/Master_Notes/Skill_10_Paraphrase_Recognition",
+      "mastery_threshold": 85,
+      "status": "APPROVED",
+      "ladder": {
+        "0": "Skill_10 Master Note",
+        "1": "Skill_10 Exam Card, Signal Word Bank, P01–P16 taxonomy",
+        "2": "258 Paraphrase Trainer (hint সহ)",
+        "3": "Synonym Map-এর ঢাকা mode (hint ছাড়া)",
+        "4": "Reading Paraphrase Bank (test-wise) + Listening Synonym Map (১,৭২৪)",
+        "5": "নতুন item: Claude খসড়া করবে, Abu Saleh যাচাই করবে",
+        "6": "উপরের সবকিছুর mix, সময় ধরে",
+        "7": "≥৮৫%; না পেলে Error Lab → দুর্বল P-type → আবার"
+      },
+      "apps": ["l-p258", "l-synonym", "r-paraphrase"]
+    },
+    {
+      "id": "X-SK-001",
+      "name": null,
+      "bn": null,
+      "modules": [],
+      "aliases": [],
+      "level": null,
+      "prerequisites": [],
+      "question_types": [],
+      "lesson_source": null,
+      "mastery_threshold": 85,
+      "status": "PENDING_SOURCE"
+    },
+    {
+      "id": "X-SK-003",
+      "name": null,
+      "bn": null,
+      "modules": [],
+      "aliases": [],
+      "level": null,
+      "prerequisites": [],
+      "question_types": [],
+      "lesson_source": null,
+      "mastery_threshold": 85,
+      "status": "PENDING_SOURCE"
+    }
+  ]
+}
