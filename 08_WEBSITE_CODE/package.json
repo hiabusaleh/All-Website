@@ -10,6 +10,6 @@
     "build:public": "PUBLIC_BUILD=1 node build.js",
     "serve": "node serve.js",
     "start": "node build.js && node serve.js",
-    "test": "node --test tests/"
+    "test": "node --test tests/*.test.js"
   }
 }

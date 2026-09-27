@@ -48,6 +48,7 @@ function route() {
     html = renderHub(ctx, second);
     active = second;
   } else if (first === 'skills') html = renderSkills(ctx);
+  else if (first === 'roadmap') html = renderRoadmap(ctx);
   else if (first === 'skill' && second) { html = renderSkill(ctx, second); active = 'skills'; }
   else if (first === 'progress') {
     html = renderProgress();
